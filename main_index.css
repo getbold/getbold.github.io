@@ -1,0 +1,260 @@
+/* font-> Inconsolata form fonts.google.com */
+@import 'https://fonts.googleapis.com/css?family=Inconsolata|Roboto';
+
+/* Custom selection color */
+::selection {
+    background: blue; /* WebKit/Blink Browsers */
+    color: white;
+}
+::-moz-selection {
+    background: blue; /* Gecko Browsers */
+    color: white;
+}
+
+/* Main styles */
+body {
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Roboto', monospace, sans-serif;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    height: 100%;
+    background: #eeeeee;
+}
+
+h1 {
+    font-family: 'Inconsolata', sans-serif;
+}
+
+.left {
+    width: 15%;
+    background: white;
+    height: 100vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+}
+
+.left_inner {
+    top: 0px;
+    padding: 20px 40px;
+}
+
+.topleft h1 {
+    font-size: 4.8em;
+}
+
+.midleft ul {
+    list-style: none;
+}
+
+.midleft li {
+    margin: 12px 0px;
+}
+
+.midleft a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.4em;
+    border-bottom: solid #e0e0e0 2px;
+
+    -webkit-transition: border-bottom .4s;
+    -moz-transition: border-bottom .4s;
+    -o-transition: border-bottom .4s;
+    -ms-transition: border-bottom .4s;
+    transition: border-bottom .4s;
+}
+
+.midleft a:hover, .midleft a:active {
+    border-bottom: solid black 2px;
+}
+
+.bottomleft {
+    bottom: 0px;
+    position: absolute;
+}
+
+.bottomleft a {
+    color: black;
+    text-decoration: none;
+    border-bottom: solid #e0e0e0 2px;
+
+    -webkit-transition: border-bottom .4s;
+    -moz-transition: border-bottom .4s;
+    -o-transition: border-bottom .4s;
+    -ms-transition: border-bottom .4s;
+    transition: border-bottom .4s;
+}
+
+.bottomleft a:hover, .bottomleft a:active {
+    border-bottom: solid black 2px;
+}
+
+.right {
+    width: 85%;
+    background: #eeeeee;
+    height: 100vh;
+    margin-left: 15%;
+}
+
+.right_inner {
+    padding: 30vh 0px 0px 32vw;
+}
+
+.right_inner h1, .right_inner p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.right_inner p {
+    font-size: 1.2em;
+    font-variant: small-caps;
+}
+
+.right_inner h1 {
+    font-size: 8em;
+}
+
+ul.nav li.icon {
+    display: none;
+}
+
+i.small {
+    font-size: 0.5em;
+    font-style: normal;
+}
+
+/* Button styles */
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 7px 30px;
+    font-size: 1.323em;
+    border: solid white 3px;
+    background: #3f51b5;
+    border-radius: 200px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+
+    -webkit-transition: all .6s, color .4s;
+    -moz-transition: all .6s, color .4s;
+    -o-transition: all .6s, color .4s;
+    -ms-transition: all .6s, color .4s;
+    transition: all .6s, color .4s;
+}
+
+.button:hover, .button:active{
+    background: transparent;
+    color: black;
+    box-shadow: none;
+    border: solid #3f51b5 3px;
+}
+
+.responsify {
+    display: none;
+}
+
+/* mobile styles */
+@media all and (max-width: 64em) {
+    body {
+        font-size: 1.4em;
+    }
+
+    .responsify {
+        display: block;
+    }
+
+    .left {
+        width: 100%;
+        position: relative;
+        height: 95px;
+        padding: 0px;
+    }
+
+    .left_inner a:not(:last-child) {
+        border: none;
+        text-decoration: underline;
+    }
+
+    .leftbigger {
+        height: 300px !important;
+    }
+
+    .left_inner {
+        padding: 0px;
+    }
+
+    .left_inner h1 {
+        margin: 0px;
+        max-width: 50%;
+    }
+
+    .left_inner .midleft li {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .left_inner .midleft ul {
+        margin-top: -110px;
+    }
+
+    .right {
+        width: 100%;
+        margin-left: 0px;
+        font-size: 2em;
+    }
+
+    .right_inner {
+        padding: 20px;
+    }
+
+    .bash {
+        max-width: 960px !important;
+    }
+
+    .bottomleft {
+        display: none;
+    }
+
+    ul.nav li {
+        display: none;
+        font-size: 2em;
+    }
+
+    ul.nav li.icon {
+      float: right;
+      display: inline-block;
+      font-size: 50px!important;
+    }
+
+    ul.nav li.icon a {
+        border: none;
+    }
+
+    ul.nav.responsive {
+        position: relative;
+        margin-top: -110px;
+    }
+
+    ul.nav.responsive li.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    ul.nav.responsive li {
+      text-align: center;
+      margin: 0px;
+      display: inline;
+    }
+
+    ul.nav.responsive li a {
+      display: block;
+      text-align: center;
+    }
+}
